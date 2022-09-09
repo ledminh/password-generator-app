@@ -1,0 +1,33 @@
+@use 'base';
+
+.main {
+    width: 90%;
+    margin: auto;
+
+    height: 100vh;
+
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    gap: 1rem;
+
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    color: base.$color2;
+}
+
+.section {
+    background-color: base.$color1;
+    padding: 1rem;
+}
+
+.passwordScreen {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+}

@@ -16,16 +16,16 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />        
         <title>Frontend Mentor | Password generator app</title>
       </Head>
-      <main>
+      <main className={styles.main}>
         <section className={styles.header}>
           <span>Password Generator</span>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section + ' ' + styles.passwordScreen}>
           <PasswordScreen />
         </section>
         
-        <section className={styles.section}>
+        <section className={styles.section + ' ' + styles.mainSection}>
           <Panel />
           <Strength/>
           <button>Generate</button>

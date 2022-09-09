@@ -1,8 +1,13 @@
+@use 'base';
+
 @font-face {
   font-family: 'mainFont';
   src: url('../assets/JetBrainsMono-Bold.ttf') format('truetype');
   
 }
+
+
+
 
 html,
 body,
@@ -16,7 +21,13 @@ body,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 18px;
   line-height: 23px;
+
+  background-color: base.$color4;
+  color: base.$color3;
+
+  
 }
+
 
 
 
