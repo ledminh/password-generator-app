@@ -25,9 +25,14 @@
     padding: 1rem;
 }
 
+.header {
+    color: base.$color2;
+}
+
 .passwordScreen {
     display: flex;
     flex-flow: row nowrap;
 
     justify-content: space-between;
+    align-items: center;
 }

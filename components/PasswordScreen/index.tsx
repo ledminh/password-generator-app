@@ -10,9 +10,9 @@ const PasswordScreen: FunctionComponent = () => {
     return (
         <>
             <div className={styles.password}>
-                P4$5W0rD!
+                <h3>P4$5W0rD!</h3>
             </div>
-            <button>
+            <button className={styles.button}>
                 <Image 
                     src={iconCopy}
                     alt="Copy Icon"

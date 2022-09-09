@@ -22,13 +22,15 @@ body,
   font-size: 18px;
   line-height: 23px;
 
-  background-color: base.$color4;
-  color: base.$color3;
+  
 
   
 }
 
-
+body {
+  background-color: base.$color4;
+  color: base.$color3;
+}
 
 
 a {
