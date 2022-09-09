@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import iconCopy from '../assets/icon-copy.svg';
+import { Panel } from '../components/Panel'
+import PasswordScreen from '../components/PasswordScreen'
+import { Strength } from '../components/Strength'
+
 
 import styles from '../styles/Home.module.scss'
 
@@ -20,31 +22,12 @@ const Home: NextPage = () => {
         </section>
 
         <section className={styles.section}>
-          <div className={styles.password}>
-            P4$5W0rD!
-          </div>
-          <button>
-            <Image 
-              src={iconCopy}
-              alt="Copy Icon"
-            />
-          </button>
+          <PasswordScreen />
         </section>
         
         <section className={styles.section}>
-          <div>
-            Character Length
-          </div>
-          <form>
-            Include Uppercase Letters
-            Include Lowercase Letters
-            Include Numbers
-            Include Symbols
-          </form>
-          <div>
-            Strength
-          </div>
-
+          <Panel />
+          <Strength/>
           <button>Generate</button>
         </section>
       </main>
