@@ -4,6 +4,8 @@ import { Panel } from '../components/Panel'
 import PasswordScreen from '../components/PasswordScreen'
 import { Strength } from '../components/Strength'
 
+import Image from 'next/image';
+import iconArrowRight from '../assets/icon-arrow-right.svg';
 
 import styles from '../styles/Home.module.scss'
 
@@ -28,7 +30,13 @@ const Home: NextPage = () => {
         <section className={styles.section + ' ' + styles.mainSection}>
           <Panel />
           <Strength/>
-          <button>Generate</button>
+          <button className={styles.button}>
+            <span>GENERATE</span>
+            <Image 
+              src={iconArrowRight}
+              alt="Right Arrow"
+              />
+          </button>
         </section>
       </main>
     </div>
