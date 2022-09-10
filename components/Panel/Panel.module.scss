@@ -51,6 +51,11 @@
         margin-top: -10.5px;
     }
 
+    input[type=range]::-webkit-slider-thumb:hover {
+        border: 2px solid base.$color5;
+        background-color: base.$color4;
+    }
+
     
     //Firefox
     input[type=range]::-moz-range-track {
@@ -69,6 +74,12 @@
         cursor: pointer;
 
     }
+
+    input[type=range]::-moz-range-thumb:hover {
+        border: 2px solid base.$color5;
+        background-color: base.$color4;
+    }
+
 
     input[type="range"]::-moz-range-progress {
         background-color: base.$color5;
