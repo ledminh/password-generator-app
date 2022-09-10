@@ -1,0 +1,27 @@
+@use '../../styles/base';
+
+.strength {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    height: 3.5rem;
+
+    padding: 1rem;
+    background-color: base.$color4;
+
+}
+
+.label {
+    color: base.$color2;
+}
+
+.display {
+    display: flex;
+    gap: 1rem;
+
+}
