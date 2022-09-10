@@ -27,7 +27,7 @@ export const Panel: FunctionComponent = () => {
                         }}
                         />
             </div>
-            <ul>
+            <ul className={styles.ul}>
                 <li>
                     <input type="checkbox" 
                             id="uppercase" 
