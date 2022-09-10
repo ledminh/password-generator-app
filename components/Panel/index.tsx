@@ -12,7 +12,7 @@ export const Panel: FunctionComponent = () => {
                         Character Length
                     </span>
                     <span className={styles.value}>
-                        10
+                        <h3>10</h3>
                     </span>
                 </label>
                 <input type="range" 

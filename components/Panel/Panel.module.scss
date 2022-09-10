@@ -1,0 +1,31 @@
+@use '../../styles/base';
+
+.characterLength {
+
+
+    label {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 1rem;
+        
+        .value {
+            color: base.$color5;
+        }
+    }
+
+
+
+
+    input {
+        width: 100%;
+        accent-color: base.$color5;
+        
+        
+    }
+    
+}
