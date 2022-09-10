@@ -40,11 +40,28 @@
 .button {
     width: 100%;
     height: 56px;
+    margin-top: 1rem;
 
     background-color: base.$color5;
-    border: inherit;
+    border: 2px solid base.$color5;
 
     span {
         margin-right: 1rem;
+    }
+
+    &:hover {
+        background-color: base.$color1;
+
+        span {
+            color: base.$color5;
+
+        }
+        
+        svg {
+            path {
+                fill: base.$color5;
+            }
+        }
+        
     }
 }

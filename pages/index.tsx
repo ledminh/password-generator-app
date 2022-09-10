@@ -4,10 +4,11 @@ import { Panel } from '../components/Panel'
 import PasswordScreen from '../components/PasswordScreen'
 import { Strength } from '../components/Strength'
 
-import Image from 'next/image';
+import Image from 'next/future/image';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
 
 import styles from '../styles/Home.module.scss'
+import RightArrow from '../components/RightArrow'
 
 const Home: NextPage = () => {
   return (
@@ -32,9 +33,11 @@ const Home: NextPage = () => {
           <Strength/>
           <button className={styles.button}>
             <span>GENERATE</span>
-            <Image 
+            {/* <Image 
               src={iconArrowRight}
-              alt="Right Arrow"
+              alt="Right Arrow Icon"
+            /> */}
+            <RightArrow
               />
           </button>
         </section>
