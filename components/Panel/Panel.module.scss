@@ -2,7 +2,6 @@
 
 .characterLength {
 
-
     label {
         width: 100%;
         display: flex;
@@ -16,16 +15,93 @@
         .value {
             color: base.$color5;
         }
-    }
+    }    
+        
 
-
-
-
-    input {
+    input[type=range] {
         width: 100%;
-        accent-color: base.$color5;
+
+        -webkit-appearance: none;
         
+        background-color:  transparent;
+        accent-color: base.$color5;  
+        
+        --curPercent: 50%; 
+    }
+
+    //Webkit
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 8px;
+        cursor: pointer;
+        background: linear-gradient(to right, base.$color5 0%, base.$color5 var(--curPercent), base.$color4 var(--curPercent), base.$color4 100%);
+            
+        border-radius: 0px;
+    }
+
+
+    input[type=range]::-webkit-slider-thumb {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        
+        background: #FFFFFF;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -10.5px;
+    }
+
+    
+    //Firefox
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+
+        background-color: base.$color4;
         
     }
-    
+
+    input[type=range]::-moz-range-thumb {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+
+    }
+
+    input[type="range"]::-moz-range-progress {
+        background-color: base.$color5;
+        height: 8px; 
+        cursor: pointer;
+
+    }
+
+    //IE
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        background: base.$color4;
+    }
+
+    input[type=range]::-ms-fill-lower {
+        background: base.$color5;
+        
+    }
+
+    input[type=range]::-ms-fill-upper {
+        background: base.$color4;
+        
+    }
+
+    input[type=range]::-ms-thumb {
+        margin-top: 1px;
+        border: 1px solid #FFFFFF;
+        height: 28px;
+        width: 28px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+        
 }

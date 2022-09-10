@@ -19,6 +19,12 @@ export const Panel: FunctionComponent = () => {
                         id="character-length" 
                         name="character-length"
                         min="0" max="20"
+                        
+                        onChange={e => {
+                            const curPercent = Number(e.target.value)*100/Number(e.target.max);
+
+                            e.target.style.setProperty('--curPercent', curPercent + '%');    
+                        }}
                         />
             </div>
             <ul>
