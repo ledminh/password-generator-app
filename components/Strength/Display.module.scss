@@ -1,0 +1,25 @@
+@use '../../styles/base';
+
+.display {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+
+.bars {
+    display: flex;
+
+    gap: .5rem;
+}
+
+.bar {
+    width: 12px;
+    height: 30px;
+
+    border: 2px solid 
+}

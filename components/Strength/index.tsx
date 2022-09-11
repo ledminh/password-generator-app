@@ -1,6 +1,9 @@
 import { FunctionComponent } from "react";
 import styles from './Strength.module.scss';
 
+import Display from "./Display";
+
+
 export const Strength:FunctionComponent = () => {
 
     return (
@@ -8,10 +11,10 @@ export const Strength:FunctionComponent = () => {
             <div className={styles.label}>
                 STRENGTH
             </div>
-            <div className={styles.display}>
-                <span>MEDIUM</span>
-                <div>||||</div>
-            </div>
+            <Display />
         </div>
     );
 }
+
+
+
