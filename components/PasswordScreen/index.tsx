@@ -1,9 +1,8 @@
 import { FunctionComponent } from "react";
+import CopyIcon from "./CopyIcon";
 
 import styles from './PasswordScreen.module.scss';
 
-import Image from 'next/image'
-import iconCopy from '../../assets/icon-copy.svg';
 
 const PasswordScreen: FunctionComponent = () => {
 
@@ -12,12 +11,13 @@ const PasswordScreen: FunctionComponent = () => {
             <div className={styles.password}>
                 <h3>P4$5W0rD!</h3>
             </div>
-            <button className={styles.button}>
-                <Image 
-                    src={iconCopy}
-                    alt="Copy Icon"
-                    />
-            </button>
+            <div className={styles.copy}>
+                <span>COPIED</span>
+                <button className={styles.button}>
+                    <CopyIcon/>
+                </button>
+            </div>
+
         </>
     )
 }
