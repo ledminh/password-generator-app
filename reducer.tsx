@@ -55,28 +55,29 @@ function reducer(state:State, action:Action) : State {
 }
 
 
-type ActionFunction = ((length: number) => void) | ((included: boolean) => void);
+export type SetIncludeFunction = (included: boolean) => void;
+export type SetLengthAction = (length: number) => void;
 
-export default function useStatus (): [State, ActionFunction, ActionFunction, ActionFunction, ActionFunction, ActionFunction] {
+export default function useStatus (): [State, SetLengthAction, SetIncludeFunction, SetIncludeFunction, SetIncludeFunction, SetIncludeFunction] {
     const [status, dispatch] = useReducer(reducer, initState);
 
-    const setLength:ActionFunction = (length: number) => dispatch({
+    const setLength = (length: number) => dispatch({
         type: ActionType.changeLength, 
         length: length});
 
-    const setIncludeLowerCase:ActionFunction = (included: boolean) => dispatch({
+    const setIncludeLowerCase = (included: boolean) => dispatch({
         type: ActionType.setIncludeLowwerCase, 
         lowercaseIncluded: included});
 
-    const setIncludeUpperCase:ActionFunction = (included: boolean) => dispatch({
+    const setIncludeUpperCase= (included: boolean) => dispatch({
         type: ActionType.setIncludeUpperCase, 
         uppercaseIncluded: included});
     
-    const setIncludeNumbers:ActionFunction = (included: boolean) => dispatch({
+    const setIncludeNumbers = (included: boolean) => dispatch({
         type: ActionType.setIncludeNumbers, 
         numberIncluded: included});
 
-    const setIncludeSymbols:ActionFunction = (included: boolean) => dispatch({
+    const setIncludeSymbols = (included: boolean) => dispatch({
         type: ActionType.setIncludeSymbols, 
         symbolIncluded: included});
     

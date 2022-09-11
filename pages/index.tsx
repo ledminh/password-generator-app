@@ -37,7 +37,9 @@ const Home: NextPage = () => {
         </section>
         
         <section className={styles.section + ' ' + styles.mainSection}>
-          <Panel />
+          <Panel 
+            {...{status, setLength, setIncludeLowerCase, setIncludeUpperCase, setIncludeNumbers, setIncludeSymbols}}
+            />
           <Strength/>
           <button className={styles.button}>
             <span>GENERATE</span>
