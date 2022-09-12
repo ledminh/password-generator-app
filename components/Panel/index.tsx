@@ -28,7 +28,13 @@ export const Panel: FunctionComponent<propType> = ({status, setLength, setInclud
                 <li>
                     <input type="checkbox" 
                             id="uppercase" 
-                            name="uppercase"/>
+                            name="uppercase"
+                            checked={status.upperCaseIncluded}
+
+                            onChange={e => {
+                                setIncludeUpperCase(e.target.checked)
+                            }}
+                            />
                     <label htmlFor="upercase">
                         Include Uppercase Letters
                     </label>
@@ -36,7 +42,13 @@ export const Panel: FunctionComponent<propType> = ({status, setLength, setInclud
                 <li>
                     <input type="checkbox" 
                             id="lowercase" 
-                            name="lowercase"/>
+                            name="lowercase"
+                            checked={status.lowerCaseIncluded}
+
+                            onChange={e => {
+                                setIncludeLowerCase(e.target.checked)
+                            }}
+                            />
                     <label htmlFor="lowercase">
                         Include Lowercase Letters
                     </label>
@@ -44,7 +56,13 @@ export const Panel: FunctionComponent<propType> = ({status, setLength, setInclud
                 <li>
                     <input type="checkbox" 
                             id="number" 
-                            name="number"/>
+                            name="number"
+                            checked={status.numbersIncluded}
+
+                            onChange={e => {
+                                setIncludeNumbers(e.target.checked)
+                            }}
+                            />
                     <label htmlFor="number">
                         Include Numbers
                     </label>
@@ -52,7 +70,14 @@ export const Panel: FunctionComponent<propType> = ({status, setLength, setInclud
                 <li>
                     <input type="checkbox" 
                             id="symbol" 
-                            name="symbol"/>
+                            name="symbol"
+                            
+                            checked={status.symbolsIncluded}
+
+                            onChange={e => {
+                                setIncludeSymbols(e.target.checked)
+                            }}
+                            />
                     <label htmlFor="symbol">
                         Include Symbols
                     </label>
