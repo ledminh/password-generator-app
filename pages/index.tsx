@@ -7,6 +7,8 @@ import { Strength } from '../components/Strength'
 import styles from '../styles/Home.module.scss'
 import RightArrow from '../components/RightArrow'
 import useStatus from '../reducer'
+import { useEffect, useState } from 'react'
+import getStrength from '../utils/getStrength'
 
 const Home: NextPage = () => {
   const [
@@ -17,6 +19,17 @@ const Home: NextPage = () => {
     setIncludeNumbers,
     setIncludeSymbols
   ] = useStatus();
+
+  const [strength, setStrength] = useState(-1);
+
+  useEffect(() => {
+    const curStrength = getStrength(status.length, status.upperCaseIncluded, status.lowerCaseIncluded, status.numbersIncluded, status.symbolsIncluded);
+  
+    setStrength(curStrength);
+
+  }, [status]);
+
+  
 
 
   return (
@@ -40,8 +53,10 @@ const Home: NextPage = () => {
           <Panel 
             {...{status, setLength, setIncludeLowerCase, setIncludeUpperCase, setIncludeNumbers, setIncludeSymbols}}
             />
-          <Strength/>
-          <button className={styles.button}>
+          <Strength strength={strength}/>
+          <button className={styles.button}
+            disabled={strength===0}
+          >
             <span>GENERATE</span>
             <RightArrow />
           </button>

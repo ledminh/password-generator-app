@@ -4,14 +4,14 @@ import styles from './Strength.module.scss';
 import Display from "./Display";
 
 
-export const Strength:FunctionComponent = () => {
+export const Strength:FunctionComponent<{strength:number}> = ({strength}) => {
 
     return (
         <div className={styles.strength}>
             <div className={styles.label}>
                 STRENGTH
             </div>
-            <Display />
+            <Display strength={strength}/>
         </div>
     );
 }

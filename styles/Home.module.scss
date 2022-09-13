@@ -46,6 +46,19 @@
     background-color: base.$color5;
     border: 2px solid base.$color5;
 
+    &:disabled {
+        pointer-events: none;
+
+        background-color: base.$color2;
+        border: base.$color2;
+        
+        svg {
+            path {
+                fill: base.$color2;
+            }
+        }
+    }
+
     span {
         margin-right: 1rem;
     }
