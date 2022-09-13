@@ -1,7 +1,7 @@
 export default function getStrength(length: number, uppercase: boolean, lowercase:boolean, numbers: boolean, symbols: boolean): number {
     let result = 0;
     
-    if(length > 0) {
+    if(length > 9) {
         if(uppercase)
             result++;
         
@@ -13,6 +13,9 @@ export default function getStrength(length: number, uppercase: boolean, lowercas
     
         if(symbols)
             result++;
+    }
+    else if(length > 1) {
+        result = 1;
     }
 
 
