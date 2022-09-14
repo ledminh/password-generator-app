@@ -12,7 +12,6 @@ const shuffle = (password: string):string => {
         
     }
     
-    console.log(password);
 
     return newPassArr.join("");
 }

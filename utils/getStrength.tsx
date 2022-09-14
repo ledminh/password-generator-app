@@ -1,6 +1,7 @@
 export default function getStrength(length: number, uppercase: boolean, lowercase:boolean, numbers: boolean, symbols: boolean): number {
     let result = 0;
-    
+    const options = [uppercase, lowercase, numbers, symbols].filter(option => option);
+
     if(length > 9) {
         if(uppercase)
             result++;
@@ -14,7 +15,7 @@ export default function getStrength(length: number, uppercase: boolean, lowercas
         if(symbols)
             result++;
     }
-    else if(length >=  [uppercase, lowercase, numbers, symbols].filter(option => option).length) {
+    else if(length !== 0 && options.length > 0 && length >=  options.length) {
         result = 1;
     }
 
