@@ -13,21 +13,12 @@ interface propType {
 } 
 
 export const Panel: FunctionComponent<propType> = ({status, setLength, setIncludeLowerCase, setIncludeUpperCase, setIncludeNumbers, setIncludeSymbols}) => {
-    const [min, setMin] = useState(0);
-
-    useEffect(() => {
-        const numOptions = Object.keys(status).filter((k) => status[k] === true).length;
-        if(status.length <= 4) {
-            setMin(numOptions);
-            setLength(numOptions);
-        }
-
-    }, [status, setLength]);
+    
 
     return (
         <form>
             <CharacterLength 
-                min={min}
+                min={0}
                 max={20}
                 length={status.length}
                 setLength={setLength}

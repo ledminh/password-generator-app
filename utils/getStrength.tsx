@@ -14,7 +14,7 @@ export default function getStrength(length: number, uppercase: boolean, lowercas
         if(symbols)
             result++;
     }
-    else if(length > 1 && (uppercase || lowercase || numbers || symbols)) {
+    else if(length >=  [uppercase, lowercase, numbers, symbols].filter(option => option).length) {
         result = 1;
     }
 

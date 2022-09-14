@@ -9,8 +9,11 @@ import RightArrow from '../components/RightArrow'
 import useStatus from '../reducer'
 import { useEffect, useState } from 'react'
 import getStrength from '../utils/getStrength'
+import generatePassword from '../utils/generatePassword'
 
 const Home: NextPage = () => {
+  const [password, setPassword] = useState('P4$5W0rD!');
+
   const [
     status,
     setLength,
@@ -27,11 +30,6 @@ const Home: NextPage = () => {
     
     
     setStrength(curStrength);
-    
-    // const numOptions = Object.keys(status).filter((k) => status[k] === true).length;
-
-    // if(status.length < numOptions)
-    //   setLength(numOptions);
     
 
   }, [setLength, status]);
@@ -53,7 +51,8 @@ const Home: NextPage = () => {
         </section>
 
         <section className={styles.section + ' ' + styles.passwordScreen}>
-          <PasswordScreen />
+          <PasswordScreen 
+            password={password}/>
         </section>
         
         <section className={styles.section + ' ' + styles.mainSection}>
@@ -63,6 +62,7 @@ const Home: NextPage = () => {
           <Strength strength={strength}/>
           <button className={styles.button}
             disabled={strength===0}
+            onClick={() => setPassword(generatePassword(status.length, status.upperCaseIncluded, status.lowerCaseIncluded, status.numbersIncluded, status.symbolsIncluded))}
           >
             <span>GENERATE</span>
             <RightArrow />

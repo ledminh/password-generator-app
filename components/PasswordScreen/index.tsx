@@ -4,12 +4,12 @@ import CopyIcon from "./CopyIcon";
 import styles from './PasswordScreen.module.scss';
 
 
-const PasswordScreen: FunctionComponent = () => {
+const PasswordScreen: FunctionComponent<{password:string}> = ({password}) => {
 
     return (
         <>
             <div className={styles.password}>
-                <h3>P4$5W0rD!</h3>
+                <h3>{password}</h3>
             </div>
             <div className={styles.copy}>
                 <span>COPIED</span>
