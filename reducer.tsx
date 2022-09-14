@@ -1,4 +1,3 @@
-import { lchown } from "fs";
 import { useReducer } from "react";
 
 enum ActionType {
@@ -18,12 +17,13 @@ type Action = {type: ActionType.changeLength, length: number}
                 | {type: ActionType.setIncludeSymbols, symbolIncluded: boolean};
 
 
-export interface State {
+export interface State  {
     length : number,
-    upperCaseIncluded : boolean,
+    upperCaseIncluded: boolean,
     lowerCaseIncluded : boolean,
     numbersIncluded : boolean,
-    symbolsIncluded : boolean
+    symbolsIncluded : boolean,
+    [key: string]: any
 }
 
 const initState: State = {

@@ -1,8 +1,7 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import styles from './Panel.module.scss';
 
 import { SetIncludeFunction, SetLengthAction, State } from "../../reducer";
-import { statSync } from "fs";
 
 interface propType {
     status: State,
@@ -14,12 +13,21 @@ interface propType {
 } 
 
 export const Panel: FunctionComponent<propType> = ({status, setLength, setIncludeLowerCase, setIncludeUpperCase, setIncludeNumbers, setIncludeSymbols}) => {
+    const [min, setMin] = useState(0);
 
+    useEffect(() => {
+        const numOptions = Object.keys(status).filter((k) => status[k] === true).length;
+        if(status.length <= 4) {
+            setMin(numOptions);
+            setLength(numOptions);
+        }
+
+    }, [status, setLength]);
 
     return (
         <form>
             <CharacterLength 
-                min={0}
+                min={min}
                 max={20}
                 length={status.length}
                 setLength={setLength}

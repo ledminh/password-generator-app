@@ -24,10 +24,17 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const curStrength = getStrength(status.length, status.upperCaseIncluded, status.lowerCaseIncluded, status.numbersIncluded, status.symbolsIncluded);
-  
+    
+    
     setStrength(curStrength);
+    
+    // const numOptions = Object.keys(status).filter((k) => status[k] === true).length;
 
-  }, [status]);
+    // if(status.length < numOptions)
+    //   setLength(numOptions);
+    
+
+  }, [setLength, status]);
 
   
 
