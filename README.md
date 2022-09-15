@@ -65,6 +65,6 @@ I need to learn more about TypeScript because (as I mentioned) it helps me to be
 
 ## Author
 
-- Website - [Minh Le](https://www.ledminh.dev)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/ledminh)
-- Twitter - [@yourusername](https://twitter.com/MinhLe29056419/)
+- Website - [ledminh.dev](https://www.ledminh.dev)
+- Frontend Mentor - [@ledminh](https://www.frontendmentor.io/profile/ledminh)
+- Twitter - [@MinhLe](https://twitter.com/MinhLe29056419/)
