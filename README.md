@@ -57,10 +57,9 @@ Working on this project also reinforces my knowledge of NextJS. One interesting 
 
 ### Continued development
 
-I need to learn more about TypeScript because (as I mentioned) it helps me to better understand my code. Moreover, most companies nowadays are using it. If I had more time to work on this project, I would probably add user log-in feature that allow user to save their password for latter. It is a good chance to learn about authentication and a little bit about backend. 
+I need to learn more about TypeScript because (as I mentioned) it helps me to better understand my code. Moreover, most companies nowadays are using it. If I had more time to work on this project, I would probably add user log-in feature that allow user to save their password for later use. It is a good chance to learn about authentication and a little bit about backend. 
 
 ### Useful resources
--using this tool: 
 
 - [Transform SVG to React Component](https://react-svgr.com/playground/) - This helped me transforming a SVG image to React Component. I love it because it gives me the freedom to do a lot of thing with the image using Javascript.
 
