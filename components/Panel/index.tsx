@@ -34,7 +34,7 @@ export const Panel: FunctionComponent<propType> = ({status, setLength, setInclud
                                 setIncludeUpperCase(e.target.checked)
                             }}
                             />
-                    <label htmlFor="upercase">
+                    <label htmlFor="uppercase">
                         Include Uppercase Letters
                     </label>
                 </li>
@@ -100,9 +100,11 @@ const CharacterLength:FunctionComponent<{length:number, min:number, max:number, 
                 <span className={styles.text}>
                     Character Length
                 </span>
-                <span className={styles.value}>
-                    <h3>{length}</h3>
-                </span>
+                <h3>
+                    <span className={styles.value}>
+                        {length}
+                    </span>
+                </h3>
             </label>
             <input type="range" 
                     id="character-length" 
