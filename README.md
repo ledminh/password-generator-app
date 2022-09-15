@@ -34,18 +34,9 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Password Generator App - Netlify](https://63226cf0dd68dd1a91297ef1--fastidious-cuchufli-432d64.netlify.app/)
 
 ## My process
 
@@ -54,19 +45,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
+- CSS Module
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+This is the first project I made using TypeScript, which is hard but useful (and sometimes annoying). It helps me be more aware of what I really want the code to do. One trick that is worth noting is that if you have ever encountered the error ```Element implicitly has an 'any' type because expression of type 'string' can't be used to index type …``` when trying to access an object property using some string index, the easy fix would be add ```[key:string]: any``` to the object’s interface.
+This project helps me reinforce my knowledge on NextJS. One interesting thing I learned is that you cannot add class to a ‘next/image’ element. There are two suggestions on Stack Overflow about how to fix it. The first one is to use ‘next/future/image` but it seems not working. The second one is to transform a svg image to React element  and then change its properties directly in javascript. It works very well in my situation.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -95,6 +85,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
+-using this tool: https://react-svgr.com/playground/
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
