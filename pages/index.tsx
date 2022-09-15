@@ -62,6 +62,7 @@ const Home: NextPage = () => {
           <Strength strength={strength}/>
           <button className={styles.button}
             disabled={strength===0}
+            aria-label="Generate Password"
             onClick={() => setPassword(generatePassword(status.length, status.upperCaseIncluded, status.lowerCaseIncluded, status.numbersIncluded, status.symbolsIncluded))}
           >
             <span>GENERATE</span>

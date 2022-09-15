@@ -21,6 +21,7 @@ const PasswordScreen: FunctionComponent<{password:string}> = ({password}) => {
             <div className={styles.copy}>
                 {isCopied? <span>COPIED</span> : null}
                 <button className={styles.button}
+                    aria-label="Copy text to clipboard"
                     onClick={() => {
                         copyTextToClipboard(password, () => setIsCopied(true));
                     }}>
