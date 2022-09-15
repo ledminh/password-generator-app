@@ -44,6 +44,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - CSS Module
+- SCSS
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
